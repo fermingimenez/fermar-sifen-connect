@@ -1,0 +1,210 @@
+<rDE xmlns="http://ekuatia.set.gov.py/sifen/xsd"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsd1="http://ekuatia.set.gov.py/sifen/xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dVerFor>141</dVerFor>
+	<DE Id="01800034570001001000026422018091710008192421">
+		<dDVId>1</dDVId>
+		<dFecFirma>2018-10-03T11:18:29</dFecFirma>
+		<gOpeDE>
+			<iTipEmi>1</iTipEmi>
+			<dDesTipEmi>Normal</dDesTipEmi>
+			<dCodSeg>000819242</dCodSeg>
+		</gOpeDE>
+		<gTimb>
+			<iTiDE>1</iTiDE>
+			<dDesTiDE>Factura electrónica</dDesTiDE>
+			<dNumTim>00000001</dNumTim>
+			<dEst>001</dEst>
+			<dPunExp>001</dPunExp>
+			<dNumDoc>0000264</dNumDoc>
+			<dFeIniT>2018-09-01</dFeIniT>
+			<dFeFinT>2025-12-31</dFeFinT>
+		</gTimb>
+		<gDatGralOpe>
+			<dFeEmiDE>2018-09-17T00:00:00</dFeEmiDE>
+			<gOpeCom>
+				<iTipTra>1</iTipTra>
+				<dDesTipTra>Venta de mercadería</dDesTipTra>
+				<iTImp>1</iTImp>
+				<dDesTImp>IVA</dDesTImp>
+				<cMoneOpe>PYG</cMoneOpe>
+				<dDesMoneOpe>Guarani</dDesMoneOpe>
+			</gOpeCom>
+			<gEmis>
+				<dRucEm>80003457</dRucEm>
+				<dDVEmi>0</dDVEmi>
+				<iTipCont>2</iTipCont>
+				<cTipReg>8</cTipReg>
+				<dNomEmi>DOCUMENTO ELECTRÓNICO SIN VALOR COMERCIAL NI FISCAL
+				</dNomEmi>
+				<dNomFanEmi>CERVECERIA PARAGUAYA S.A.</dNomFanEmi>
+				<dDirEmi>Ruta Acceso Sur Km 30</dDirEmi>
+				<dNumCas>0</dNumCas>
+				<cDepEmi>12</cDepEmi>
+				<dDesDepEmi>CENTRAL</dDesDepEmi>
+				<cDisEmi>168</cDisEmi>
+				<dDesDisEmi>YPANE</dDesDisEmi>
+				<cCiuEmi>06096</cCiuEmi>
+				<dDesCiuEmi>COLONIA THOMPSON 1A.</dDesCiuEmi>
+				<dTelEmi>215886444</dTelEmi>
+				<dEmailE>LOVERA@CERVEPAR.COM.PY</dEmailE>
+				<cActEco>11130</cActEco>
+				<dDesActEco>ELABORACIÓN DE BEBIDAS MALTEADAS YDE MALTA</dDesActEco>
+			</gEmis>
+			<gDatRec>
+				<iNatRec>1</iNatRec>
+				<iTiOpe>1</iTiOpe>
+				<cPaisRec>PRY</cPaisRec>
+				<dDesPaisRe>Paraguay</dDesPaisRe>
+				<iTiContRec>1</iTiContRec>
+				<dRucRec>80010075</dRucRec>
+				<dDVRec>1</dDVRec>
+				<dNomRec>F  F S.A.</dNomRec>
+				<dNomFanRec>F  F S.A.</dNomFanRec>
+				<dDirRec>Calle 2 y Calle 3 Barrio Santa Rosa</dDirRec>
+				<dCodCliente>500</dCodCliente>
+			</gDatRec>
+		</gDatGralOpe>
+		<gDtipDE>
+			<gCamFE>
+				<iIndPres>2</iIndPres>
+				<dDesIndPres>Operación electrónica</dDesIndPres>
+			</gCamFE>
+			<gCamCond>
+				<iCondOpe>1</iCondOpe>
+				<dDCondOpe>Contado</dDCondOpe>
+				<gPaConEIni>
+					<iTiPago>5</iTiPago>
+					<dDesTiPag>Transferencia</dDesTiPag>
+					<dMonTiPag>700</dMonTiPag>
+					<cMoneTiPag>PYG</cMoneTiPag>
+					<dDMoneTiPag>Guarani</dDMoneTiPag>
+				</gPaConEIni>
+			</gCamCond>
+			<gCamItem>
+				<dCodInt>16262</dCodInt>
+				<dDesProSer>DOCUMENTO ELECTRÓNICO SIN VALOR COMERCIAL NI FISCAL -
+					GENERADO EN AMBIENTE DE PRUEBA</dDesProSer>
+				<cUniMed>4</cUniMed>
+				<dDesUniMed>KGR</dDesUniMed>
+				<dCantProSer>1</dCantProSer>
+				<gValorItem>
+					<dPUniProSer>700</dPUniProSer>
+					<dDescItem>0</dDescItem>
+					<dPorcDesIt>0</dPorcDesIt>
+					<dTotOpeItem>700</dTotOpeItem>
+				</gValorItem>
+				<gCamIVA>
+					<iAfecIVA>1</iAfecIVA>
+					<dDesAfecIVA>Gravado IVA</dDesAfecIVA>
+					<dPropIVA>100</dPropIVA>
+					<dTasaIVA>10</dTasaIVA>
+					<dBasGravIVA>636.3636364</dBasGravIVA>
+					<dLiqIVAItem>63.63636364</dLiqIVAItem>
+				</gCamIVA>
+			</gCamItem>
+		</gDtipDE>
+		<gTotSub>
+			<dSubExe>0</dSubExe>
+			<dSubExo>0</dSubExo>
+			<dSub5>0</dSub5>
+			<dSub10>700</dSub10>
+			<dSubISC>0</dSubISC>
+			<dTotOpe>700.00</dTotOpe>
+			<dTotDesc>0</dTotDesc>
+			<dPorcDescTotal>0</dPorcDescTotal>
+			<dDescTotal>0</dDescTotal>
+			<dAnticipo>0</dAnticipo>
+			<dRedon>0</dRedon>
+			<dTotGralOpe>0</dTotGralOpe>
+			<dIVA10>63.63636364</dIVA10>
+			<dTotIVA>63.63636364</dTotIVA>
+			<dBaseGrav10>636.3636364</dBaseGrav10>
+			<dTBasGraIVA>636.3636364</dTBasGraIVA>
+		</gTotSub>
+		<gCamGen>
+			<dOrdVta>3063</dOrdVta>
+			<dAsiento>9029631656</dAsiento>
+		</gCamGen>
+	</DE>
+	<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+		<SignedInfo>
+			<CanonicalizationMethod
+				Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+			<SignatureMethod
+				Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+			<Reference
+				URI="#01800034570001001000026422018091710008192421">
+				<Transforms>
+					<Transform
+						Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+					<Transform
+						Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+				</Transforms>
+				<DigestMethod
+					Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+				<DigestValue>hoAWL1MnrkDp5yu2how9xwmts7u/aVZXat4QPPs+TSs=</DigestValue>
+			</Reference>
+		</SignedInfo>
+		<SignatureValue>M8Gl46XrBmJ3qavQbusfsv5TvHS8jYa07kQYZtrN4wYrIGqGhUl3jcd/UVKeFckklwX0Y1I2Ad6uOUS85ldDkWxU3gP0IAF1dmZ6Sc5FMzGNkqPIWMFl74eYvph/UBmMN7VD+DDv+ptL6TQYAat4SoU6u9n7KIQNh8s0o+rtHctG8TORs7KSqSBN0mQ7rKCj/nV1F/TjcimvAIeKbmRxJ/lbj9fgFMeHf7b3fkep+cohwU7+wxCThpsc5rO8aybgydYvxVPrn6LsPb+ljDby/oGRjbB1DlS55+LAARCmZnSRQnjv2uG03Uy0/fbdRmzdrOn9cB6UzC64MGkS6qkbWg==</SignatureValue>
+		<KeyInfo>
+			<X509Data>
+				<X509IssuerSerial>
+					<X509IssuerName>C=PY, O=DOCUMENTA S.A., CN=CA-DOCUMENTA S.A., SERIALNUMBER=RUC 80050172-1</X509IssuerName>
+					<X509SerialNumber>1620345226254007986</X509SerialNumber>
+				</X509IssuerSerial>
+				<X509Certificate>MIIIaTCCBlGgAwIBAgIIFnyfZfhevrIwDQYJKoZIhvcNAQELBQAwWzEXMBUGA1UE
+					BRMOUlVDIDgwMDUwMTcyLTExGjAYBgNVBAMTEUNBLURPQ1VNRU5UQSBTLkEuMRcw
+					FQYDVQQKEw5ET0NVTUVOVEEgUy5BLjELMAkGA1UEBhMCUFkwHhcNMTgwODIzMTky
+					OTM0WhcNMTkwODIzMTkzOTM0WjCBpTELMAkGA1UEBhMCUFkxGzAZBgNVBAQMEk1B
+					UlRJTkVaICBWSUxMQUxCQTESMBAGA1UEBRMJQ0kzNTM3NTk4MRIwEAYDVQQqDAlG
+					UkFOQ0lTQ08xFzAVBgNVBAoMDlBFUlNPTkEgRklTSUNBMREwDwYDVQQLDAhGSVJN
+					QSBGMTElMCMGA1UEAwwcRlJBTkNJU0NPIE1BUlRJTkVaICBWSUxMQUxCQTCCASIw
+					DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJtzkxOz8m/NuG2aZGQrE81MmEJG
+					BZXjNEy4KyOGu/lnbIQpLza7CqFtTwTp7ef5Rgm3dQfkIWRMZzZw2fjFSzC7J+bi
+					TbQQBd0lgXcUXHiMIAlh+S556CqwUoDOLx9nZ/nvm5DenWnmpjKq2r6owT0IIlt+
+					k7lMt84M0KdGc4DT4ywDEsVJVoFm6iwyfbGwwbj6DTW71f8XXsR0LWl9M/fiCYfa
+					3H79CmfQlM56nmpd5FI0hb40qEyoiEPbWMtK3X/8IqlrgEEYK8oLV8jhaiCoNeG0
+					amn2n1+9I4wf+GshEXxMsjU//ozPKLLOWYrmWDi5sOnIdLw4JXxgS/pamwECAwEA
+					AaOCA+QwggPgMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgXgMCoGA1UdJQEB
+					/wQgMB4GCCsGAQUFBwMBBggrBgEFBQcDAgYIKwYBBQUHAwQwHQYDVR0OBBYEFOno
+					Pflw0QgkWGPjpRU4U8Xd1dOmMIGWBggrBgEFBQcBAQSBiTCBhjA5BggrBgEFBQcw
+					AYYtaHR0cDovL3d3dy5kb2N1bWVudGEuY29tLnB5L2Zpcm1hZGlnaXRhbC9vc2Nw
+					MEkGCCsGAQUFBzAChj1odHRwczovL3d3dy5kb2N1bWVudGEuY29tLnB5L2Zpcm1h
+					ZGlnaXRhbC9kZXNjYXJnYXMvY2Fkb2MuY3J0MB8GA1UdIwQYMBaAFEAmrCZcYo/G
+					9QJU5I3BGibW7qWyME8GA1UdHwRIMEYwRKBCoECGPmh0dHBzOi8vd3d3LmRvY3Vt
+					ZW50YS5jb20ucHkvZmlybWFkaWdpdGFsL2Rlc2Nhcmdhcy9jcmxkb2MuY3JsMIGI
+					BgNVHREEgYAwfoEYZm1hcnRpbmVAY2VydmVwYXIuY29tLnB5pGIwYDEhMB8GA1UE
+					CgwYQ0VSVkVDRVJJQSBQQVJBR1VBWUEgUy5BMSMwIQYDVQQMDBpHRVJFTlRFIERF
+					IENPTlRST0wgSU5URVJOTzEWMBQGA1UEBRMNUlVDODAwMDM0NTctMDCCAd0GA1Ud
+					IASCAdQwggHQMIIBzAYOKwYBBAGC+TsBAQEFAQEwggG4MD8GCCsGAQUFBwIBFjNo
+					dHRwczovL3d3dy5kb2N1bWVudGEuY29tLnB5L2Zpcm1hZGlnaXRhbC9kZXNjYXJn
+					YXMwgcAGCCsGAQUFBwICMIGzGoGwRXN0ZSBlcyB1biBjZXJ0aWZpY2FkbyBkZSBw
+					ZXJzb25hIGbtc2ljYSBjdXlhIGNsYXZlIHByaXZhZGEgZXN04SBjb250ZW5pZGEg
+					ZW4gdW4gbfNkdWxvIGRlIHNvZnR3YXJlIHNlZ3VybyBjdXlhIGZpbmFsaWRhZCBl
+					cyBhdXRlbnRpY2FyIGEgc3UgdGl0dWxhciBvIGdlbmVyYXIgZmlybWFzIGRpZ2l0
+					YWxlcy4wgbEGCCsGAQUFBwICMIGkGoGhVGhpcyBpcyBhbiBlbmQgdXNlciBjZXJ0
+					aWZpY2F0ZSB3aG9zZSBwcml2YXRlIGtleSBpcyBlbWJlZGRlZCB3aXRoaW4gYSBz
+					ZWN1cmUgc29mdHdhcmUgbW9kdWxlIHRoYXQgYWltcyB0byBhdXRoZW50aWNhdGUg
+					aXRzIG93bmVyIG9yIGdlbmVyYXRlIGRpZ2l0YWwgc2lnbmF0dXJlcy4wDQYJKoZI
+					hvcNAQELBQADggIBAJTrvlRnr0WOSxz+jZnAd8Vxjh8dyrz0DJUveItYv6aidKob
+					41uRzy548ajn7BvclryLZrO2eTZ3LrKb1C8/JRuU7kAfInjAJ5S+w8UgMicdMZGn
+					627R+13ZIZutFlnMOH+A7oLwseTnE3OCQEUTwRcDxVBbH+b8LkQTx45XIe2aFvBn
+					whNXYU4cUJzwvOy8f+DVcSpOtaaUqs6zwWPhDImI82uj0huFn7zDRf4mbnd66i+9
+					LGLc1wXkrqq3/oKIpIx7OOYJ4CuGqwdmc/DMRPP9M96fHavE6pPGs7R0/rD9C7S9
+					mrN9H4hJyIqgiGl5tVesn4YehKAk/ONMTcBQcp50I7HTCNbhZ2s9uV2RKhrzhVhE
+					LaE4NYWOtGFEqKFvNWXqc6bJv5UAfa1VuKolnAshelUZDZ6CwuCdKQ3oJSTplB65
+					DiIpBIiktnJ/I/MSz5axGMH/gMBl+bhDBpNWN8C5KExM1q/He8Cdm19S+DVZuSum
+					+T5s2qfT44XHB78ZSg9bBjg2+q/ydpmGQLyDX0+LVkV6D3Wc9fL87sTKNJHgn3X2
+					oeusi6RdfP37DRiTs8gzwKy7xQayBFYdjp5cN/XxQwwLHCvh4bxxNuaUhoRfkX4n
+					aDXbZ8pYDnUpq1cesYk44lqKnyI+iwufIzkrhN6W6QsYHLGt4NlnsGU7uWq6
+				</X509Certificate>
+			</X509Data>
+		</KeyInfo>
+	</Signature>
+	<gCamFuFD>
+		<dCarQR>1212212121212122222222121212122101212121212121201ASD4444440170010010SFSG0145282GJFH2501201HJHGJK71587322IYUI6094</dCarQR>
+		<dInfAdic />
+	</gCamFuFD>
+</rDE>

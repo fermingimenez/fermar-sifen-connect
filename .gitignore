@@ -1,0 +1,14 @@
+
+\.settings/
+
+\.classpath
+
+\.project
+
+\.springBeans
+
+target/classes/
+
+src/test/resources/keystoreKonecta\.jks
+
+target/
