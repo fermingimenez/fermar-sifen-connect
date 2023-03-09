@@ -1,7 +1,7 @@
 package py.com.fermar.services;
 
 import org.springframework.http.ResponseEntity;
-
+import org.w3c.dom.Document;
 import py.com.fermar.exception.SIFENException;
 
 import java.util.Map;
@@ -24,5 +24,7 @@ public interface UtilsService {
      * @throws SIFENException 
      */
     ResponseEntity<Object> calcularQR(Map<String, Object> param) throws SIFENException;
+
+	String firmar(Document inXml) throws SIFENException;
 
 }

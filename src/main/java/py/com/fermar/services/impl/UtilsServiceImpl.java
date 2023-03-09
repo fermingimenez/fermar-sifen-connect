@@ -32,7 +32,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.KeyStore;
 import java.util.*;
-
+import javax.xml.XMLConstants;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -48,7 +48,7 @@ public class UtilsServiceImpl implements UtilsService {
 	private ResourceLoader resource;
 
 	@Override
-	public ResponseEntity<Object> firmar(Map<String, Object> param) throws SIFENException {
+	public ResponseEntity<Object> firmar(Map<String, Object> param0) throws SIFENException {
 
 		String KEYSTORE_FILE_NAME = "LCBA-DOCUMENTA.p12";
 		StringWriter sw = new StringWriter();
@@ -98,6 +98,38 @@ public class UtilsServiceImpl implements UtilsService {
 		HashMap<String, String> retorno = new HashMap<String, String>();
 		retorno.put("rDEFirmado", sw.toString());
 		return new ResponseEntity<>(retorno, HttpStatus.OK);
+	}
+	
+	
+	@Override
+	public String firmar(Document inXml) throws SIFENException {
+
+		String KEYSTORE_FILE_NAME = "LCBA-DOCUMENTA.p12";
+		StringWriter sw = new StringWriter();
+
+		try {
+
+			KeyStore ks = KeyStore.getInstance("PKCS12");
+			String storename = resource.getResource("/WEB-INF/resources/" + KEYSTORE_FILE_NAME).getFile().getPath();
+			char[] storepass = "qwerty".toCharArray();
+			
+			try (FileInputStream fin = new FileInputStream(storename)) {
+				ks.load(fin, storepass);
+			}
+
+
+			Document signedXmlDocument = SignXmlSifenWithCryptoDsig.signDocument(inXml, ks);
+
+			TransformerFactory factory = TransformerFactory.newInstance();
+			factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+			Transformer trans = factory.newTransformer();
+			trans.transform(new DOMSource(signedXmlDocument), new StreamResult(sw));
+
+		} catch (Exception e) {
+			throw new SIFENException(e);
+		}
+
+		return sw.toString();
 	}
 
 	@Override

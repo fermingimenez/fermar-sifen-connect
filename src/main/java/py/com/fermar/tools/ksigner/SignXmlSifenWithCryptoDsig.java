@@ -31,7 +31,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import net.shibboleth.utilities.java.support.primitive.StringSupport;
-import py.com.konecta.tools.ksigner.KsignerXmlDsig;
 
 public class SignXmlSifenWithCryptoDsig {
 	
@@ -41,12 +40,24 @@ public class SignXmlSifenWithCryptoDsig {
 	 * Signature fuera del tag firmado y referencia asignada al sign
 	 * @param pathXMLDocument
 	 * @param keystore
+	 * @throws DocumentReadException 
 	 */
-	public static Document signDocument(String pathXMLDocument, KeyStore keystore) {    
+	public static Document signDocument(String pathXMLDocument, KeyStore keystore) 
+			throws DocumentReadException {    
+		
+        	Document inXml = KsignerXmlDsig.readXMLDocument(pathXMLDocument);
+    		return signDocumentXML(inXml, keystore);
+			
+    }
+	
+	public static Document signDocument(Document inXml, KeyStore keystore) {
+		
+    		return signDocumentXML(inXml, keystore);			
+    }
+	
+	private static Document signDocumentXML(Document inXml, KeyStore keystore) {    
 		String ref = "";
-		Document inXml = null;
         try {
-    		inXml = KsignerXmlDsig.readXMLDocument(pathXMLDocument);
   
     		// Marque el atributo de referencia como un atributo de ID válido
     		Element id = (Element) inXml.getChildNodes().item(0).getChildNodes().item(3);
@@ -120,7 +131,6 @@ public class SignXmlSifenWithCryptoDsig {
         } catch (Exception e) {
             e.printStackTrace();
         }
-		return inXml; 
- 
+		return inXml;  
     }
 }

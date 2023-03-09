@@ -22,7 +22,7 @@
 		<jdk.version>1.8</jdk.version>
 		<maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
 		<testng.version>6.14.3</testng.version>
-		<ksigner.tool.version>1.0.0</ksigner.tool.version>
+		<ksigner.tool.version>1.0.2-SNAPSHOT</ksigner.tool.version>
 		<commons-codec.version>1.11</commons-codec.version>
 		<commons-io.version>1.3.2</commons-io.version>
 		<sifen.firmaelectronica.version>0.0.1-SNAPSHOT</sifen.firmaelectronica.version>
@@ -31,6 +31,8 @@
 		<opensaml.version>3.2.0</opensaml.version>
 		<javax.servlet.version>3.1.0</javax.servlet.version>
 		<jackson.version>2.9.5</jackson.version>
+		<commons.lang.version>3.7</commons.lang.version>
+		<staxon.version>1.3</staxon.version>
 	</properties>
 
 	<dependencies>
@@ -102,11 +104,12 @@
 			<version>${spring.version}</version>
 		</dependency>
 		
-		<!--dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
+        	<version>5.0.6.RELEASE</version>
 			<scope>compile</scope>
-		</dependency-->
+		</dependency>
 
 		<!--SPRING TEST -->
 		<dependency>
@@ -128,6 +131,34 @@
 			<version>${jackson.version}</version>
 		</dependency>
 
+        <!--APACHE COMMONS LANG -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+			<version>${commons.lang.version}</version>
+        </dependency>
+        
+        <!--STAXON -->
+        <dependency>
+            <groupId>de.odysseus.staxon</groupId>
+            <artifactId>staxon</artifactId>
+			<version>${staxon.version}</version>
+        </dependency>        
+
+        <!-- STAXON - GSON -->
+        <dependency>
+            <groupId>de.odysseus.staxon</groupId>
+            <artifactId>staxon-gson</artifactId>
+			<version>${staxon.version}</version>
+        </dependency>
+        
+		<!-- JASPER REPORTS -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.10.0</version>
+		</dependency>
+        
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -175,8 +206,8 @@
 
 		<!-- ksigner tool -->
 		<dependency>
-			<groupId>py.com.konecta</groupId>
-			<artifactId>ksigner-tool</artifactId>
+			<groupId>py.com.fermar</groupId>
+			<artifactId>fermar-ksigner-tool</artifactId>
 			<version>${ksigner.tool.version}</version>
 		</dependency>
 
@@ -219,6 +250,35 @@
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
+			
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sources>
+						<source>${resourcesDir}/schemas/WS_SiRecepEvento_v150.xsd</source>
+					</sources>
+					<generateEpisode>false</generateEpisode>
+					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<packageName>py.gov.sifen.eventos.response</packageName>
+					<clearOutputDir>false</clearOutputDir>
+					<xjbSources>
+						<xjbSource>${resourcesDir}/bindings.xjb</xjbSource>
+					</xjbSources>
+				</configuration>
+			</plugin>
+			
+			
 		</plugins>
 		<finalName>${project.artifactId}</finalName>
 	</build>
