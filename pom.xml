@@ -33,6 +33,7 @@
 		<jackson.version>2.9.5</jackson.version>
 		<commons.lang.version>3.7</commons.lang.version>
 		<staxon.version>1.3</staxon.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 
 	<dependencies>
@@ -214,7 +215,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -248,33 +249,6 @@
 					<compilerArgument>-Xlint:all</compilerArgument>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
-				</configuration>
-			</plugin>
-			
-			
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>2.2</version>
-				<executions>
-					<execution>
-						<id>xjc</id>
-						<goals>
-							<goal>xjc</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<sources>
-						<source>${resourcesDir}/schemas/WS_SiRecepEvento_v150.xsd</source>
-					</sources>
-					<generateEpisode>false</generateEpisode>
-					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-					<packageName>py.gov.sifen.eventos.response</packageName>
-					<clearOutputDir>false</clearOutputDir>
-					<xjbSources>
-						<xjbSource>${resourcesDir}/bindings.xjb</xjbSource>
-					</xjbSources>
 				</configuration>
 			</plugin>
 			
