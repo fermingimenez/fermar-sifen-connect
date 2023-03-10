@@ -48,7 +48,7 @@ public class UtilsServiceImpl implements UtilsService {
 	private ResourceLoader resource;
 
 	@Override
-	public ResponseEntity<Object> firmar(Map<String, Object> param0) throws SIFENException {
+	public ResponseEntity<Object> firmar(Map<String, Object> param) throws SIFENException {
 
 		String KEYSTORE_FILE_NAME = "LCBA-DOCUMENTA.p12";
 		StringWriter sw = new StringWriter();

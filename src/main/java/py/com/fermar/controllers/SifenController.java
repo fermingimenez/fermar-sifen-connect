@@ -15,9 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import py.com.fermar.exception.SIFENException;
 import py.com.fermar.services.DocumentoElectronicoService;
 import py.com.fermar.services.UtilsService;
-import py.gov.sifen.soluciongratuita.constants.EkuatiaiConstants.EkuatiaiHTTPStatus;
-import py.gov.sifen.soluciongratuita.controllers.DocumentosElectronicosGratuitosController;
-import py.gov.sifen.soluciongratuita.service.DocumentosElectronicosGratuitosService;
 
 @Controller
 @RequestMapping(value = "sifen-connect")
@@ -48,7 +45,7 @@ public class SifenController {
 		try {
 
 			mapDTEResponse = documentosElectronicosGratuitoService.generarDocumentoElectronico(param,
-					authenticationFacade.getUsuarioId());
+					1L); //authenticationFacade.getUsuarioId());
 			mapDTEResponse.put(MENSAJE, "Proceso Generado");
 			return new ResponseEntity<>(mapDTEResponse, HttpStatus.ACCEPTED);
 

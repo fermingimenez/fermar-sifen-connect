@@ -29,6 +29,47 @@ public abstract class AppConstants {
 			return value;
 		}
 	}
+	
+	public enum EstadosDTEEnum {
+		APROBADO("A", "Aprobado"), NOTIFICACION("N", "Aprobado con Observación"), CANCELADO("C",
+				"Cancelado");
+
+
+		private String codigo;
+		private String descripcion;
+
+		private EstadosDTEEnum(String codigo, String descripcion) {
+			this.codigo = codigo;
+			this.descripcion = descripcion;
+		}
+
+		public String getCodigo() {
+			return codigo;
+		}
+
+		public Integer getCodigoInt() {
+			return Integer.valueOf(codigo);
+		}
+
+		public String getDescripcion() {
+			return descripcion;
+		}
+
+		/**
+		 * Obtiene la descricpcion apartir del codigo
+		 * 
+		 * @param codigo
+		 * @return descripcion
+		 */
+		public static String getDescripcion(String codigo) {
+			for (EstadosDTEEnum elem : values()) {
+				if (codigo.equals(elem.getCodigo())) {
+					return elem.getDescripcion();
+				}
+			}
+			return "";
+		}
+	}
 
 	public enum EstadosLote {
 		INGRESADO("I"), PROCESANDO("P"), FINALIZADO("F"), CANCELADO("C");

@@ -1,7 +1,6 @@
 package py.com.fermar.exception;
 
 import org.xml.sax.SAXParseException;
-import py.gov.sifen.commons.schema.SAXParserErrorHandler;
 
 import java.util.List;
 

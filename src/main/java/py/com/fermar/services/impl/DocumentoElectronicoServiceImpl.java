@@ -55,6 +55,7 @@ import py.com.fermar.exception.XMLReadException;
 import py.com.fermar.request.RDE;
 import py.com.fermar.request.TgCamItem;
 import py.com.fermar.request.TDE;
+import py.com.fermar.request.TgActEco;
 import py.com.fermar.services.DocumentoElectronicoService;
 import py.com.fermar.services.UtilsService;
 import py.com.fermar.utils.EmailUtils;
@@ -69,11 +70,11 @@ public class DocumentoElectronicoServiceImpl implements DocumentoElectronicoServ
 	@Autowired
 	private String sifenUrlConsultaQr;
 	
-	@Autowired
+	/*@Autowired
 	private DocumentoElectronicoXmlService documentoElectronicoXmlService;
 	
 	@Autowired
-	private DocumentosElectronicoService documentosElectronicoService;
+	private DocumentosElectronicoService documentosElectronicoService;*/
 
 	@Autowired
 	private UtilsService utilsService;
@@ -509,8 +510,8 @@ public class DocumentoElectronicoServiceImpl implements DocumentoElectronicoServ
     	if (!isDigitoVerificadorValido(cdc.substring(0, cdc.length() - 1), 11, cdc.substring(cdc.length() - 1))) {
             throw new SIFENException(CDC_INVALIDO);
         }
-
-        List<DocumentoElectronicoXml> listDocumentXml = documentoElectronicoXmlService.getById(cdc);
+return null;
+        /*List<DocumentoElectronicoXml> listDocumentXml = documentoElectronicoXmlService.getById(cdc);
         if (listDocumentXml.isEmpty()) {
         	throw new SIFENException(CDC_NO_ENCONTRADO);
         }
@@ -527,7 +528,7 @@ public class DocumentoElectronicoServiceImpl implements DocumentoElectronicoServ
 		} catch (Exception e) {
         	LOGGER.error("Exception", e);
        	 	throw new SIFENException("Error gral. al generar el KuDE");
-		}
+		}*/
        
     }
     
@@ -772,7 +773,7 @@ public class DocumentoElectronicoServiceImpl implements DocumentoElectronicoServ
 		}*/
 		return activEcoUsuario;
 	}
-
+/*
 	private List<TiposDocumentosPunto> obtenemosTiposDocumentos(UsuariosFacturadores usuarioFact) 
 			throws SIFENException {
 		try {
@@ -794,7 +795,7 @@ public class DocumentoElectronicoServiceImpl implements DocumentoElectronicoServ
 			throw new SIFENException(ERROR_MESSAGE + "Datos del Usuario Facturador. " 
 			+ e.getMessage());
 		}
-	}
+	}*/
 
 	private ContribuyenteDTO obtenerDatosContribuyente(String ruc) 
 			throws SIFENException {
@@ -1175,7 +1176,7 @@ public class DocumentoElectronicoServiceImpl implements DocumentoElectronicoServ
 	private void enviarEmail(Document xDEXml, String cdc, String dEmailRec) 
 			throws SIFENException, TransformerException {
 	
-		String emailRecCon;
+		String emailRecCon = "";
 		boolean enviarCC = false;
 		String asunto = "DTE - " + cdc;
 		String texto = "Se ha emitido el Documento Tributario Electrónico con "
@@ -1303,5 +1304,25 @@ public class DocumentoElectronicoServiceImpl implements DocumentoElectronicoServ
         String secret = ""; //jedis.hget(key, "csc");
         return secret != null && !secret.isEmpty();
     }
+
+	@Override
+	public Long guardarDocumentoElectronicoGratuito(Map<String, Object> parametros, Long usuario)
+			throws SIFENException, TransformerException, IOException, SAXException,
+			ParserConfigurationException, SIFENGuardarException, ParseException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int countEventosReceptor(Map<String, Object> parametros) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public ResponseEntity<Object> consultarDE(Map<String, Object> param) {
+		// TODO Auto-generated method stub
+		return null;
+	}
     
 }

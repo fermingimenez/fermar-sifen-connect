@@ -4,23 +4,19 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-import py.gov.sifen.commons.domain.CodigoSeguridadContribuyente;
-import py.gov.sifen.commons.ek.domain.Establecimiento;
-import py.gov.sifen.commons.ek.domain.EkParametrosDetalle;
-
 public class ConfiguracionListaDTO {
-	private List<EkParametrosDetalle> modalidad;
+	private String modalidad;
 	private BigDecimal timbrado;
 	private Date fechaInicioVigencia;
 	private String tipoContribuyente;
-	private List<Establecimiento> establecimiento;
-	private List<CodigoSeguridadContribuyente> listaCSC;
+	private String establecimiento;
+	private String listaCSC;
 	private List<ActividadEconomicaDTO> listaActividad;
 	
-	public List<EkParametrosDetalle> getModalidad() {
+	public String getModalidad() {
 		return modalidad;
 	}
-	public void setModalidad(List<EkParametrosDetalle> modalidad) {
+	public void setModalidad(String modalidad) {
 		this.modalidad = modalidad;
 	}
 	public BigDecimal getTimbrado() {
@@ -35,16 +31,16 @@ public class ConfiguracionListaDTO {
 	public void setFechaInicioVigencia(Date fechaInicioVigencia) {
 		this.fechaInicioVigencia = fechaInicioVigencia;
 	}
-	public List<Establecimiento> getEstablecimiento() {
+	public String getEstablecimiento() {
 		return establecimiento;
 	}
-	public void setEstablecimiento(List<Establecimiento> establecimiento) {
+	public void setEstablecimiento(String establecimiento) {
 		this.establecimiento = establecimiento;
 	}
-	public List<CodigoSeguridadContribuyente> getListaCSC() {
+	public String getListaCSC() {
 		return listaCSC;
 	}
-	public void setListaCSC(List<CodigoSeguridadContribuyente> listaCSC) {
+	public void setListaCSC(String listaCSC) {
 		this.listaCSC = listaCSC;
 	}
 	public List<ActividadEconomicaDTO> getListaActividad() {

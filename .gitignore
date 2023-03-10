@@ -12,3 +12,5 @@ target/classes/
 src/test/resources/keystoreKonecta\.jks
 
 target/
+
+request/

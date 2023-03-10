@@ -2,7 +2,7 @@ package py.com.fermar.dto;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-import py.gov.sifen.commons.ek.constants.AppEkConstants;
+import py.com.fermar.constants.AppConstants;
 
 public class DocumentoElectronicoDTO {
 	private String cdc;
@@ -88,7 +88,7 @@ public class DocumentoElectronicoDTO {
 	}
 
 	public String getEstadoDescripcion() {		
-		return AppEkConstants.EstadosDTEEnum.getDescripcion(estado);
+		return AppConstants.EstadosDTEEnum.getDescripcion(estado);
 	}
 
 	public String getEstablecimiento() {
