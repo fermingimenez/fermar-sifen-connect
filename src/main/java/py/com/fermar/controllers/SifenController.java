@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import py.com.fermar.authproviders.IAuthenticationFacade;
 import py.com.fermar.exception.SIFENException;
 import py.com.fermar.services.DocumentoElectronicoService;
 import py.com.fermar.services.UtilsService;
@@ -25,6 +25,9 @@ public class SifenController {
 
 	@Autowired
 	private DocumentoElectronicoService documentosElectronicosGratuitoService;
+	
+	@Autowired
+	IAuthenticationFacade authenticationFacade;
 
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(SifenController.class.getName());
@@ -36,27 +39,28 @@ public class SifenController {
 	public static final String MENSAJE_ERROR = "Error Inesperado";
 	public static final String OPERACION_EVENTO = "ekuatiai-evento";
 	private static final String MENSAJE = "mensaje";
-	public static final String EKUATIAI_PROCESS = "ekuatiai";
+	public static final String PROCESS_ID = "controller";
 	
-	@PostMapping(value = "generar")
+	
+	@PostMapping(value = "generar-de")
 	public ResponseEntity<Object> generarProcesoFirma(@RequestBody String param) {
 		Map<String, Object> mapDTEResponse = new HashMap<>();
 
 		try {
 
 			mapDTEResponse = documentosElectronicosGratuitoService.generarDocumentoElectronico(param,
-					1L); //authenticationFacade.getUsuarioId());
+					authenticationFacade.getUsuarioId());
 			mapDTEResponse.put(MENSAJE, "Proceso Generado");
 			return new ResponseEntity<>(mapDTEResponse, HttpStatus.ACCEPTED);
 
 		} catch (SIFENException xsnfe) {
 			mapDTEResponse.put(MENSAJE, xsnfe.getMessage());
-			LOGGER.error(EKUATIAI_PROCESS + " : " + xsnfe.getMessage(), xsnfe);
+			LOGGER.error(PROCESS_ID + " : " + xsnfe.getMessage(), xsnfe);
 			return ResponseEntity.status(HttpStatus.OK).body(mapDTEResponse);
 
 		} catch (Exception e) {
 			mapDTEResponse.put(MENSAJE, MENSAJE_ERROR);
-			LOGGER.error(EKUATIAI_PROCESS + " : " + e.getMessage(), e);
+			LOGGER.error(PROCESS_ID + " : " + e.getMessage(), e);
 			return ResponseEntity.status(HttpStatus.OK).body(mapDTEResponse);
 
 		}

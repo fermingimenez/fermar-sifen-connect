@@ -9,15 +9,10 @@
 
 	<name>SIFEN-connect::FerMar</name>
 
-	<!--parent>
-		<artifactId>sifen-parent-pom</artifactId>
-		<groupId>py.gov.sifen</groupId>
-		<version>1.0.0</version>
-	</parent-->
-
 	<properties>
 		<spring.version>5.0.8.RELEASE</spring.version>
 		<spring.framework.version>5.0.6.RELEASE</spring.framework.version>
+        <spring.security.version>5.0.5.RELEASE</spring.security.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.8</jdk.version>
 		<maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
@@ -110,6 +105,24 @@
 			<artifactId>spring-context-support</artifactId>
         	<version>5.0.6.RELEASE</version>
 			<scope>compile</scope>
+		</dependency>
+		
+		
+		<!--SPRING SECURITY -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
 		</dependency>
 
 		<!--SPRING TEST -->
